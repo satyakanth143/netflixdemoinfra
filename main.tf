@@ -3,8 +3,8 @@ region = "ap-south-1"
 }
 
 resource "aws_instance" "one" {
-count = 4
-ami = "ami-08fe5144e4659a3b3"
+count = 6
+ami = "ami-099340ab7490f8ef6"
 instance_type = "t2.medium"
 key_name = "satya"
 vpc_security_group_ids = ["sg-0e972c119147390e0"]
@@ -14,5 +14,5 @@ Name = var.instance_names[count.index]
 }
 
 variable "instance_names" {
-default = ["jenkins", "tomcat-1", "tomcat-2", "Monitoring server"]
+default = ["Ansible", "Dev-1", "Dev-2", "Monitoring server","Test-1","Test-2"]
 }
