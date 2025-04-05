@@ -5,7 +5,7 @@ region = "ap-south-1"
 resource "aws_instance" "one" {
 count = 6
 ami = "ami-099340ab7490f8ef6"
-instance_type = "t2.medium"
+instance_type = "t2.micro"
 key_name = "satya"
 vpc_security_group_ids = ["sg-0e972c119147390e0"]
 tags = {
